@@ -1,13 +1,16 @@
 import React from 'react';
 import  {BrowserRouter as Router, Route} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import Navigation from './components/Navigation'
 import NewTraining from './components/NewTraining'
+import Question1 from './components/Question1'
 function App() {
   return (
     <Router>
       <Navigation/>
-      <Route path="/" component={NewTraining}/>
+      <Route exact path="/" component={NewTraining}/>
+      <Route path="/q1" component={Question1}/>
     </Router>
   );
 }
