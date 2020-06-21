@@ -4,7 +4,7 @@ export default class Navigation extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <Link className="navbar-brand" TO="/">Capacitación para CLP-COVID-MX</Link>
+        <Link className="navbar-brand" to="/">Capacitación para CLP-COVID-MX</Link>
       </nav>
     );
   }
