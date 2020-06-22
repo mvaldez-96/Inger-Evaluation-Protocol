@@ -8,7 +8,7 @@ export default class Instructions extends Component {
   render() {
     return (
       <div className="container col-lg-3 col-md-6 col-sm-12">
-        <div class="d-flex justify-content-center" style={{ paddingTop: 75, marginBottom: 50 }}>
+        <div className="d-flex justify-content-center" style={{ paddingTop: 75, marginBottom: 50 }}>
           <Breadcrumbs
             aria-label="breadcrumb"
             separator=">"
@@ -23,15 +23,15 @@ export default class Instructions extends Component {
             </Typography>
           </Breadcrumbs>
         </div>
-        <div class="card text-center">
-          <div class="card-body">
-            <h5 class="card-title">Instrucciones</h5>
-            <p class="card-text">
+        <div className="card text-center">
+          <div className="card-body">
+            <h5 className="card-title">Instrucciones</h5>
+            <p className="card-text">
               A continuación se le mostrarán una serie de acciones las cuáles se pueden realizar en el sistema CLP-COVID-MX.
             </p>
-            <Link href="/"class="btn btn-light" style={{borderColor:"black", marginRight:5}} > Cancelar</Link>
+            <Link href="/"className="btn btn-light" style={{borderColor:"black", marginRight:5}} > Cancelar</Link>
             
-            <Link href="/q1"class="btn btn-dark"  style={{color:"white"}}> Continuar  </Link>
+            <Link href="/q1"className="btn btn-dark"  style={{color:"white"}}> Continuar  </Link>
           </div>
         </div>
       </div>

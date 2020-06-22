@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Typography from "@material-ui/core/Typography";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import "../App.css";
+import axios from "axios"
 export default class NewTraining extends Component {
   state = {
     email: "",
@@ -9,35 +10,34 @@ export default class NewTraining extends Component {
     genre: "Masculino",
   };
   async componentDidMount(){
-    localStorage.removeItem("user")
+    //localStorage.removeItem("user")
   }
   onSubmit = async (e) => {
     e.preventDefault();
     const newUser = {
       place: this.state.place,
-      email: this.state.email,
-      name: this.state.name, 
+      username: this.state.email,
+      firstname: this.state.name, 
       lastname: this.state.lastname,
       age: this.state.age,
-      genre: this.state.genre,
+      gender: this.state.genre,
       city: this.state.city,
       state: this.state.local_state
     };
-    console.log(newUser);
     localStorage.setItem("user", JSON.stringify(newUser));
+    axios.post("https://ingerciceseback.herokuapp.com/cuidadores", newUser)
     this.props.history.push("/instructions");
   };
   onInputChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
     });
-    console.log(e.target.value);
   };
   render() {
     return (
       <div className="container col-lg-3 col-md-6 col-sm-12">
         <div
-          class="d-flex justify-content-center"
+          className="d-flex justify-content-center"
           style={{ paddingTop: 75, marginBottom: 50 }}
         >
           <Breadcrumbs
